@@ -1,0 +1,11 @@
+<button><- Домой</button>
+<div class="board">
+  <h2>{{ title }}</h2>
+  <div class="row">
+    <app-list-board class="pillar" *ngFor="let list of lists"
+                    [lists]="list"></app-list-board>
+    <div>
+      <button>+ добавить список</button>
+    </div>
+  </div>
+</div>

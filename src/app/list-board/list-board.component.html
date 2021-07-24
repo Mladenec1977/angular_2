@@ -1,0 +1,5 @@
+<h3>{{ lists?.title }}</h3>
+<app-card *ngFor="let card of lists?.cards"
+          [card]="card"></app-card>
+
+<button>+ добавить карточку</button>

@@ -1,0 +1,11 @@
+<div>
+  <h2>{{ title }}</h2>
+</div>
+<div class="home-board">
+  <div class="panel" *ngFor="let board of boardService.boards">
+    <h2>{{ board.title }}</h2>
+  </div>
+  <div class="panel">
+    <button>+ создать доску</button>
+  </div>
+</div>
