@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ILists} from "../interfaces/lists.interfaces";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-board',
@@ -37,9 +38,12 @@ export class BoardComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('board_id'));
+    console.log(productIdFromRoute);
   }
 
 }
